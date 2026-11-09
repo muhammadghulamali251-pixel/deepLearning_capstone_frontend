@@ -16,7 +16,7 @@ const batchPredict = async (file) => {
         const result = await response.json()
 
         if (!response.ok) {
-            return {success: false, message: result.detail}
+            return {success: false, message: typeof result.detail === "string" ? result.detail : "Request failed"}
         }
 
         return {success:true, message: result}
