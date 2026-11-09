@@ -176,7 +176,7 @@ const Batch = () => {
 
         {/* Success result section */}
         {success && (
-          <section className='flex items-center flex-wrap gap-4 bg-white border border-[#e4e8ef] rounded-xl shadow-sm px-6 py-5.5'>
+          <section className='mt-4 flex items-center flex-wrap gap-4 bg-white border border-[#e4e8ef] rounded-xl shadow-sm px-6 py-5.5'>
             <span className='flex items-center justify-center shrink-0 h-11.5 w-11.5 rounded-[10px] bg-[#e5f4ea] text-[#15803d]'>
               <CircleCheck size={22} />
             </span>
