@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Pie, Bar } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
@@ -9,7 +9,15 @@ ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Le
 import { MessageSquare, ThumbsUp, ThumbsDown, CircleHelp, Percent, Activity, ChartPie, ChartColumn } from 'lucide-react'
 import { data } from 'react-router-dom'
 
+// API
+import { serverWakeUp } from '../api/Server'
+
 const Dashboard = () => {
+
+  // Server wakeup
+  useEffect(() => {
+    serverWakeUp()
+  },[])
 
   const [quickPredictions, setQuickPredictions] = useState(() => {
     const saved = JSON.parse(localStorage.getItem("QuickPrediction") || "[]")
