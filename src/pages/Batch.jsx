@@ -46,7 +46,7 @@ const Batch = () => {
     setAnalyzeLoader(true)
     const timer = setTimeout(() => {
       setServer(true)
-    }, 12000)
+    }, 40000)
 
     const result = await batchPredict(file)
 
