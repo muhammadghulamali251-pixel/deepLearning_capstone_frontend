@@ -2,7 +2,7 @@
 
 const quickReview = async (review) => {
     try {
-        const response = await fetch("http://localhost:8000/quick/predict", {
+        const response = await fetch("https://deeplearning-capstone-backend-1.onrender.com/batch/predict", {
             method: "POST",
             headers: {'Content-Type': "application/json"},
             body: JSON.stringify(review)
